@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tcgs",
+  "info": {
+    "singularName": "tcg",
+    "pluralName": "tcgs",
+    "displayName": "Tcg",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "names": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::collection.collection",
+      "mappedBy": "tcg"
+    }
+  }
+}
