@@ -12,16 +12,12 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
-      "type": "string"
-    },
     "description": {
       "type": "text",
       "maxLength": 80
     },
     "slug": {
-      "type": "uid",
-      "targetField": "title"
+      "type": "uid"
     },
     "cover": {
       "type": "media",
@@ -33,26 +29,31 @@
         "videos"
       ]
     },
-    "author": {
+    "name": {
+      "type": "string"
+    },
+    "tag": {
+      "type": "string"
+    },
+    "available": {
+      "type": "boolean"
+    },
+    "expansion": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::author.author",
-      "inversedBy": "articles"
+      "target": "api::collection.collection",
+      "inversedBy": "name"
     },
-    "blocks": {
-      "type": "dynamiczone",
-      "components": [
-        "shared.media",
-        "shared.quote",
-        "shared.rich-text",
-        "shared.slider"
-      ]
+    "type": {
+      "type": "string"
     },
-    "condition": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::condition.condition",
-      "inversedBy": "shortname"
+    "code": {
+      "type": "string"
+    },
+    "images": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.slider"
     }
   }
 }

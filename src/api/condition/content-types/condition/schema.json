@@ -16,12 +16,6 @@
     },
     "shortName": {
       "type": "string"
-    },
-    "shortname": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::article.article",
-      "mappedBy": "condition"
     }
   }
 }

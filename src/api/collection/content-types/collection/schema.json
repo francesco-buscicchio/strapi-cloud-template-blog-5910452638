@@ -26,6 +26,12 @@
       "relation": "manyToOne",
       "target": "api::tcg.tcg",
       "inversedBy": "names"
+    },
+    "name": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article",
+      "mappedBy": "expansion"
     }
   }
 }
