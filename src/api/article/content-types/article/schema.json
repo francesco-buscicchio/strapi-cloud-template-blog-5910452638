@@ -54,6 +54,12 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.slider"
+    },
+    "article_variants": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article-variant.article-variant",
+      "mappedBy": "article"
     }
   }
 }
